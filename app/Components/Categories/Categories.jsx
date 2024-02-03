@@ -29,7 +29,7 @@ const Categories = async () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu w-80 min-h-full bg-base-100 text-base-content rounded-xl p-0 relative">
+                    <ul className="menu w-80 min-h-full bg-base-100 text-base-content rounded-xl p-0 overflow-hidden">
                         {/* Sidebar content here */}
                         <div className=''>
                         <h4 className=" bg-green-600 text-white text-center px-3 py-4  font-semibold m-0 rounded-t-xl">Categories</h4>
