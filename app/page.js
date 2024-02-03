@@ -5,6 +5,7 @@ export default function Home() {
     
     <main>
       <h2 className="text-4xl text-center text-green-400">Welcome to dua</h2>
+     
     </main>
   );
 }

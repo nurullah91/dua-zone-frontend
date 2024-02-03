@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html className="bg-slate-200" lang="en">
       <body className={`${inter.className}`}>
       <LeftNav></LeftNav>
-      {/* <Navbar></Navbar> */}
+      <Navbar></Navbar>
       {children}
       </body>
     </html>
