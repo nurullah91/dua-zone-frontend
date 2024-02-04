@@ -1,11 +1,8 @@
 import React from 'react';
 import duaCardLogo from '@/public/duacard.svg'
 import Image from 'next/image';
-import { IoCopyOutline } from "react-icons/io5";
-import { CiBookmark } from "react-icons/ci";
-import { IoBulbOutline } from "react-icons/io5";
-import { FaShareAlt } from "react-icons/fa";
-import { TbInfoOctagon } from "react-icons/tb";
+import CardButtons from '@/app/Components/CardButtons/CardButtons';
+import { Toaster } from 'react-hot-toast';
 
 
 async function getDuas(categoryId) {
@@ -26,9 +23,11 @@ const CategoryDua = async ({ params }) => {
 
     return (
         <div>
+            {/* React hot toast */}
+            <Toaster/>
             <div>
                 {
-                    duas.map((dua, index) => <div className='my-5 p-6 bg-base-100 rounded-xl' key={dua.dua_id}>
+                    duas.map((dua, index) => <div id={dua.dua_id} className='my-5 p-6 bg-base-100 rounded-xl' key={dua.dua_id}>
 
                         <div className='flex items-center gap-3'>
                             <Image src={duaCardLogo} alt='icon' />
@@ -49,27 +48,9 @@ const CategoryDua = async ({ params }) => {
 
                         </div>}
 
-                        <div className='flex justify-between items-center mt-8'>
-                            <div>Audio</div>
-                            <div className="flex gap-4">
-                                <div>
-                                    <IoCopyOutline className='text-slate-500 text-2xl' />
-                                </div>
-                                <div>
-                                    <CiBookmark className='text-slate-500 text-2xl' />
-                                </div>
-                                <div>
-                                    <IoBulbOutline className='text-slate-500 text-2xl' />
-                                </div>
-                                <div>
-                                    <FaShareAlt className='text-slate-500 text-2xl' />
-                                </div>
-                                <div>
-                                    <TbInfoOctagon className='text-slate-500 text-2xl' />
-                                </div>
-
-                            </div>
-                        </div>
+                       <CardButtons
+                       dua={dua}
+                       />
 
                     </div>)
                 }

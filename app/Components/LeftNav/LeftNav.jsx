@@ -13,7 +13,7 @@ import { IoBook } from "react-icons/io5";
 
 const LeftNav = () => {
     return (
-        <div className='flex flex-row items-center px-5 py-5 rounded-badge bg-base-100 min-h-full lg:left-5 lg:top-5 lg:flex-col bottom-0 w-full justify-between lg:w-fit'>
+        <div className='flex flex-row items-center px-5 py-5 rounded-badge bg-base-100 lg:h-screen lg:left-5 fixed lg:static lg:top-5 lg:flex-col bottom-0 w-full justify-between lg:w-fit ml-6'>
             
             <div className='p-3 rounded-full w-fit lg:'>
                 <Link href={'/'}>
