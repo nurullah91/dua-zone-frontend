@@ -29,15 +29,13 @@ export default function RootLayout({ children }) {
               <Navbar></Navbar>
             </div>
 
-            <div className="duaContainer">
-              <div className="cat">
+              <div className="">
                 <Categories></Categories>
               </div>
-              <div className="ch">
+              <div className="">
                 {children}
               </div>
-
-            </div>
+           
 
           </div>
         </div>

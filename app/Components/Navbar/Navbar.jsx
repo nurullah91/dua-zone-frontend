@@ -25,9 +25,9 @@ const Navbar = () => {
                     <h2 className="text-2xl">Duas Page</h2>
                 </div>
                 <div className="flex-none gap-2">
-                    <div className="form-control relative py-6">
+                    <div className="form-control relative">
                         <input type="text" placeholder="Search" className="input input-bordered w- md:w-auto " />
-                        <button className='bg-slate-100 rounded-md px-3 py-2 absolute right-3 top-7'>
+                        <button className='bg-slate-100 rounded-md px-3 py-2 absolute right-3 top-1'>
                             <IoIosSearch className='text-2xl'/>
                         </button>
                     </div>

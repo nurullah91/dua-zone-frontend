@@ -27,7 +27,7 @@ const CategoryDua = async ({ params }) => {
             <Toaster/>
             <div>
                 {
-                    duas.map((dua, index) => <div id={dua.dua_id} className='my-5 p-6 bg-base-100 rounded-xl' key={dua.dua_id}>
+                    duas.map((dua, index) => <div id={dua.dua_id} className='mb-5 p-6 bg-base-100 rounded-xl' key={dua.dua_id}>
 
                         <div className='flex items-center gap-3'>
                             <Image src={duaCardLogo} alt='icon' />
