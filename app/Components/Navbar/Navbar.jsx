@@ -20,7 +20,7 @@ import { IoIosSearch } from "react-icons/io";
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar mt-4">
+            <div className="navbar">
                 <div className="flex-1">
                     <h2 className="text-2xl">Duas Page</h2>
                 </div>

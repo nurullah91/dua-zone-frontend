@@ -15,24 +15,30 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="bg-slate-200" lang="en">
-      
+
 
       <body className={`${inter.className}`}>
         <div>
-          <div className="">
-            <Navbar></Navbar>
-          </div>
-          <div className="flex gap-5">
-
-            <div>
+          {/* grid gap-6 grid-cols-[115px, 1fr] grid-rows-2 */}
+          <div className="myContainer">
+            <div className="leftNav">
               <LeftNav></LeftNav>
             </div>
-            <div>
-              <Categories></Categories>
+
+            <div className="navBar">
+              <Navbar></Navbar>
             </div>
-            <div>
-              {children}
+
+            <div className="duaContainer">
+              <div className="cat">
+                <Categories></Categories>
+              </div>
+              <div className="ch">
+                {children}
+              </div>
+
             </div>
+
           </div>
         </div>
       </body>

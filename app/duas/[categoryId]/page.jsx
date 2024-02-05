@@ -19,7 +19,7 @@ const CategoryDua = async ({ params }) => {
 
     const categoryId = params.categoryId;
     const duas = await getDuas(categoryId);
-    console.log(duas);
+  
 
     return (
         <div>

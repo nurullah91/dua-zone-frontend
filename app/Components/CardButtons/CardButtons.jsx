@@ -58,25 +58,103 @@ const CardButtons = ({ dua }) => {
         const duas = [];
         duas.push(dua.dua_id);
         const created_at = new Date();
-        
+
         // checking for new folder or old folder
         if (!newFolder) {
             const folderName = form.folderName.value;
 
-            if(previousBookmarks){
+            if (previousBookmarks) {
                 const bookmark = JSON.parse(previousBookmarks);
 
                 // Add new bookmark
-                bookmark.folder = {duas, created_at}
+                bookmark[folderName] = { duas, created_at }
 
                 // set to the local storage;
-                localStorage.setItem("bookmarks", JSON.stringify(bookmark))
+                localStorage.setItem("bookmarks", JSON.stringify(bookmark));
+
+                // show success alert
+                toast.success('Bookmark added', {
+                    style: {
+                        padding: "20px",
+                        background: "#333",
+                        color: "white"
+                    },
+                    iconTheme: {
+                        primary: 'white',
+                        secondary: 'black',
+                    },
+                    position: "bottom-center"
+                })
+                form.reset();
             }
-            console.log({ folderName, created_at, duas });
+
+            else {
+                const bookMark = { folderName: { duas, created_at } };
+                localStorage.setItem("bookmarks", JSON.stringify(bookMark));
+                // Show success alert
+                toast.success('Bookmark Done', {
+                    style: {
+                        padding: "15px",
+                        background: "#333",
+                        color: "white"
+                    },
+                    iconTheme: {
+                        primary: 'white',
+                        secondary: 'black',
+                    },
+                    position: "bottom-center"
+                })
+                form.reset();
+            }
         }
+
+        // If folder is new
         else {
-            console.log({ newFolder, created_at, duas });
-            
+            if (previousBookmarks) {
+                const bookmark = JSON.parse(previousBookmarks);
+
+                // Add new bookmark
+                bookmark[newFolder] = { duas, created_at };
+
+                // set to the local storage;
+                localStorage.setItem("bookmarks", JSON.stringify(bookmark));
+
+                // Show success alert
+                toast.success('Bookmark Done', {
+                    style: {
+                        padding: "20px",
+                        background: "#333",
+                        color: "white"
+                    },
+                    iconTheme: {
+                        primary: 'white',
+                        secondary: 'black',
+                    },
+                    position: "bottom-center"
+                })
+
+                form.reset();
+            }
+
+            else {
+                const bookMark = { [newFolder]: { duas, created_at } };
+                localStorage.setItem("bookmarks", JSON.stringify(bookMark));
+                // Show success alert
+                toast.success('Bookmark Done', {
+                    style: {
+                        padding: "15px",
+                        background: "#333",
+                        color: "white"
+                    },
+                    iconTheme: {
+                        primary: 'white',
+                        secondary: 'black',
+                    },
+                    position: "bottom-center"
+                })
+                form.reset();
+            }
+
         }
 
 
