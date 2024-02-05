@@ -1,6 +1,12 @@
+# Dua zone
+
+This project is a dua application. Here you see and read dua. Also you can here dua pronunciation. You can copy the dua and also add you favorite list
+
+![homepage](./public/Screenshot%202024-02-06%20003422.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### Getting Started
 
 First, run the development server:
 
@@ -17,7 +23,7 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -25,3 +31,8 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+
+### Resources
+This projects data is coming from another server. 
+Server side [code](https://github.com/nurullah91/dua-zone-server)

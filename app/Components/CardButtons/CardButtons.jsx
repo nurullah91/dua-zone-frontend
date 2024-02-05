@@ -180,7 +180,11 @@ const CardButtons = ({ dua }) => {
 
         <div className='flex justify-between items-center mt-8'>
             <Toaster />
-            <div>Audio</div>
+            <div>
+                {dua.audio && <audio controls>
+                    <source src={dua.audio} type='audio/ogg' />
+                </audio>}
+            </div>
             <div className="flex gap-4">
                 <button onClick={handleCopy} title='Copy'>
                     <IoCopyOutline className='text-slate-500 text-2xl' />
